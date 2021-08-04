@@ -121,6 +121,21 @@ async def dm(ctx, user: discord.User, *, message):
     await ctx.send(embed=embed)
     await ctx.message.delete()
     
+### COMMANDE SAY ###
+
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def say(ctx, *texte):
+    await ctx.send(" ".join(texte))
+    await ctx.message.delete()
+
+### COMMANDE BONJOUR ###
+
+@bot.command()
+async def bonjour(ctx):
+    await ctx.send(ctx.author.display_name + " dit bonjour à **tout le monde**")
+    await ctx.message.delete()
+
 
 ### END OF SCRIPT : TOKEN LOADING ###
 bot.run('TOKEN HERE')
