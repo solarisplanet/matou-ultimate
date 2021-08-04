@@ -4,7 +4,7 @@
 # REQUIREMENTS.TXT
 
 import discord
-from discord.ext import commands, tasks, loops
+from discord.ext import commands
 
 bot = commands.Bot(command_prefix = "m!")
 
